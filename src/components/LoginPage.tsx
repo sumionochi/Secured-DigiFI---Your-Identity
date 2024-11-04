@@ -7,7 +7,7 @@ export default function LoginPage() {
   useEffect(() => {
     const fetchQRCode = async () => {
       const result = await initiateLogin();
-      setQrCode(result.text); // Assuming the QR text is what you want to display
+      setQrCode(result.text); 
     };
 
     fetchQRCode();

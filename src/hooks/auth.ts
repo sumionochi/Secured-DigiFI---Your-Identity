@@ -1,7 +1,7 @@
 import { createAuthRequest, requestQR, queryQRResult, cancelQueryQRResult } from 'ontlogin';
 
 export async function initiateLogin() {
-  const authRequest = createAuthRequest(); // Generate authentication request
+  const authRequest = createAuthRequest(); 
   const challenge = await fetch('your-server-url-to-get-challenge', { 
     method: 'POST',
     headers: {
@@ -19,7 +19,6 @@ export async function initiateLogin() {
 export async function checkQRResult(id: string) {
   try {
     const challengeResponse = await queryQRResult(id);
-    // Submit the challenge response to your server
     const response = await fetch('your-server-url-to-submit-response', {
       method: 'POST',
       headers: {
